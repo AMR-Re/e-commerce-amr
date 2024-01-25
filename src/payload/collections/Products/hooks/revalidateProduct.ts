@@ -7,9 +7,9 @@ import { revalidate } from '../../../utilities/revalidate'
 // Only revalidate existing docs that are published
 // Don't scope to `operation` in order to purge static demo pages
 export const revalidateProduct: AfterChangeHook = ({ doc, req: { payload } }) => {
-  if (doc._status === 'published') {
-    revalidate({ payload, collection: 'products', slug: doc.slug })
-  }
+	if (doc._status === 'published') {
+		revalidate({ payload, collection: 'products', slug: doc.slug })
+	}
 
-  return doc
+	return doc
 }

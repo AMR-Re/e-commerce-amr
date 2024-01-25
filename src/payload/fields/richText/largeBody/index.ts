@@ -5,10 +5,10 @@ import Element from './Element'
 import withLargeBody from './plugin'
 
 const richTextLargeBody: RichTextCustomElement = {
-  name: 'large-body',
-  Button,
-  Element,
-  plugins: [withLargeBody],
+	name: 'large-body',
+	Button,
+	Element,
+	plugins: [withLargeBody],
 }
 
 export default richTextLargeBody
