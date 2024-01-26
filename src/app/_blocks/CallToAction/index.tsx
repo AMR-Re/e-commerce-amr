@@ -17,11 +17,7 @@ export const CallToActionBlock: React.FC<
 > = ({ links, richText, invertBackground }) => {
   return (
     <Gutter>
-      <VerticalPadding
-        className={[classes.callToAction, invertBackground && classes.invert]
-          .filter(Boolean)
-          .join(' ')}
-      >
+      <VerticalPadding className={[classes.callToAction, invertBackground && classes.invert].filter(Boolean).join(' ')}>
         <div className={classes.wrap}>
           <div className={classes.content}>
             <RichText className={classes.richText} content={richText} />

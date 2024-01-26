@@ -65,14 +65,7 @@ export const Button: React.FC<Props> = ({
   const Element: ElementType = el
 
   return (
-    <Element
-      href={href}
-      className={className}
-      type={type}
-      {...newTabProps}
-      onClick={onClick}
-      disabled={disabled}
-    >
+    <Element href={href} className={className} type={type} {...newTabProps} onClick={onClick} disabled={disabled}>
       {content}
     </Element>
   )

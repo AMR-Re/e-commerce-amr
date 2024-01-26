@@ -84,21 +84,14 @@ export default async function Order({ params: { id } }) {
                   <Link href={`/products/${product.slug}`} className={classes.mediaWrapper}>
                     {!metaImage && <span className={classes.placeholder}>No image</span>}
                     {metaImage && typeof metaImage !== 'string' && (
-                      <Media
-                        className={classes.media}
-                        imgClassName={classes.image}
-                        resource={metaImage}
-                        fill
-                      />
+                      <Media className={classes.media} imgClassName={classes.image} resource={metaImage} fill />
                     )}
                   </Link>
                   <div className={classes.rowContent}>
                     {!stripeProductID && (
                       <p className={classes.warning}>
                         {'This product is not yet connected to Stripe. To link this product, '}
-                        <Link
-                          href={`${process.env.NEXT_PUBLIC_SERVER_URL}/admin/collections/products/${id}`}
-                        >
+                        <Link href={`${process.env.NEXT_PUBLIC_SERVER_URL}/admin/collections/products/${id}`}>
                           edit this product in the admin panel
                         </Link>
                         {'.'}

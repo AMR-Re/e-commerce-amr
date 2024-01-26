@@ -63,9 +63,7 @@ export default async function Orders() {
                         currency: 'usd',
                       }).format(order.total / 100)}
                     </p>
-                    <p className={classes.orderDate}>{`Ordered On: ${formatDateTime(
-                      order.createdAt,
-                    )}`}</p>
+                    <p className={classes.orderDate}>{`Ordered On: ${formatDateTime(order.createdAt)}`}</p>
                   </div>
                 </div>
                 <Button

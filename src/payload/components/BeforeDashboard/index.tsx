@@ -24,11 +24,7 @@ const BeforeDashboard: React.FC = () => {
         </li>
         <li>
           {'Head over to '}
-          <a
-            href="https://dashboard.stripe.com/test/apikeys"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://dashboard.stripe.com/test/apikeys" target="_blank" rel="noopener noreferrer">
             {'Stripe to obtain your API Keys'}
           </a>
           {
@@ -49,25 +45,16 @@ const BeforeDashboard: React.FC = () => {
           <i>Product Details</i>.
         </li>
         <li>
-          If you created this repo using Payload Cloud, head over to GitHub and clone it to your
-          local machine. It will be under the <i>GitHub Scope</i> that you selected when creating
-          this project.
+          If you created this repo using Payload Cloud, head over to GitHub and clone it to your local machine. It will
+          be under the <i>GitHub Scope</i> that you selected when creating this project.
         </li>
         <li>
           {'Modify your '}
-          <a
-            href="https://payloadcms.com/docs/configuration/collections"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://payloadcms.com/docs/configuration/collections" target="_blank" rel="noopener noreferrer">
             collections
           </a>
           {' and add more '}
-          <a
-            href="https://payloadcms.com/docs/fields/overview"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://payloadcms.com/docs/fields/overview" target="_blank" rel="noopener noreferrer">
             fields
           </a>
           {' as needed. If you are new to Payload, we also recommend you check out the '}
@@ -80,9 +67,7 @@ const BeforeDashboard: React.FC = () => {
           </a>
           {' docs.'}
         </li>
-        <li>
-          Commit and push your changes to the repository to trigger a redeployment of your project.
-        </li>
+        <li>Commit and push your changes to the repository to trigger a redeployment of your project.</li>
       </ul>
       {'Pro Tip: This block is a '}
       <a

@@ -89,9 +89,7 @@ export const ProductSelect: React.FC<TextField> = props => {
                 color: '#9A9A9A',
               }}
             >
-              {`Manage "${
-                options.find(option => option.value === stripeProductID)?.label || 'Unknown'
-              }" in Stripe`}
+              {`Manage "${options.find(option => option.value === stripeProductID)?.label || 'Unknown'}" in Stripe`}
             </span>
             <CopyToClipboard value={href} />
           </div>

@@ -73,9 +73,9 @@ const AccountForm: React.FC = () => {
   useEffect(() => {
     if (user === null) {
       router.push(
-        `/login?error=${encodeURIComponent(
-          'You must be logged in to view this page.',
-        )}&redirect=${encodeURIComponent('/account')}`,
+        `/login?error=${encodeURIComponent('You must be logged in to view this page.')}&redirect=${encodeURIComponent(
+          '/account',
+        )}`,
       )
     }
 
@@ -95,23 +95,12 @@ const AccountForm: React.FC = () => {
       <Message error={error} success={success} className={classes.message} />
       {!changePassword ? (
         <Fragment>
-          <Input
-            name="email"
-            label="Email Address"
-            required
-            register={register}
-            error={errors.email}
-            type="email"
-          />
+          <Input name="email" label="Email Address" required register={register} error={errors.email} type="email" />
           <Input name="name" label="Name" register={register} error={errors.name} />
 
           <p>
             {'Change your account details below, or '}
-            <button
-              type="button"
-              className={classes.changePassword}
-              onClick={() => setChangePassword(!changePassword)}
-            >
+            <button type="button" className={classes.changePassword} onClick={() => setChangePassword(!changePassword)}>
               click here
             </button>
             {' to change your password.'}
@@ -121,11 +110,7 @@ const AccountForm: React.FC = () => {
         <Fragment>
           <p>
             {'Change your password below, or '}
-            <button
-              type="button"
-              className={classes.changePassword}
-              onClick={() => setChangePassword(!changePassword)}
-            >
+            <button type="button" className={classes.changePassword} onClick={() => setChangePassword(!changePassword)}>
               cancel
             </button>
             .

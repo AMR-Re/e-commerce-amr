@@ -38,15 +38,7 @@ export type Props = {
 export const CollectionArchive: React.FC<Props> = props => {
   const { categoryFilters, sort } = useFilter()
 
-  const {
-    className,
-    relationTo,
-    showPageRange,
-    onResultChange,
-    limit = 10,
-    populatedDocs,
-    populatedDocsTotal,
-  } = props
+  const { className, relationTo, showPageRange, onResultChange, limit = 10, populatedDocs, populatedDocsTotal } = props
 
   const [results, setResults] = useState<Result>({
     totalDocs: typeof populatedDocsTotal === 'number' ? populatedDocsTotal : 0,
@@ -114,9 +106,7 @@ export const CollectionArchive: React.FC<Props> = props => {
 
     const makeRequest = async () => {
       try {
-        const req = await fetch(
-          `${process.env.NEXT_PUBLIC_SERVER_URL}/api/${relationTo}?${searchQuery}`,
-        )
+        const req = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/${relationTo}?${searchQuery}`)
         const json = await req.json()
         clearTimeout(timer)
         hasHydrated.current = true
@@ -151,12 +141,7 @@ export const CollectionArchive: React.FC<Props> = props => {
       <Fragment>
         {showPageRange !== false && (
           <div className={classes.pageRange}>
-            <PageRange
-              totalDocs={results.totalDocs}
-              currentPage={results.page}
-              collection={relationTo}
-              limit={limit}
-            />
+            <PageRange totalDocs={results.totalDocs} currentPage={results.page} collection={relationTo} limit={limit} />
           </div>
         )}
 

@@ -49,9 +49,7 @@ export const Input: React.FC<Props> = ({
       />
       {error && (
         <div className={classes.errorMessage}>
-          {!error?.message && error?.type === 'required'
-            ? 'This field is required'
-            : error?.message}
+          {!error?.message && error?.type === 'required' ? 'This field is required' : error?.message}
         </div>
       )}
     </div>

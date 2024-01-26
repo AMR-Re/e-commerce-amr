@@ -5,10 +5,10 @@ import Element from './Element'
 import withLabel from './plugin'
 
 const richTextLabel: RichTextCustomElement = {
-	name: 'label',
-	Button,
-	Element,
-	plugins: [withLabel],
+  name: 'label',
+  Button,
+  Element,
+  plugins: [withLabel],
 }
 
 export default richTextLabel

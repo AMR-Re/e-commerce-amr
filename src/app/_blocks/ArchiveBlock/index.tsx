@@ -12,16 +12,7 @@ export const ArchiveBlock: React.FC<
     id?: string
   }
 > = props => {
-  const {
-    introContent,
-    id,
-    relationTo,
-    populateBy,
-    limit,
-    populatedDocs,
-    populatedDocsTotal,
-    categories,
-  } = props
+  const { introContent, id, relationTo, populateBy, limit, populatedDocs, populatedDocsTotal, categories } = props
 
   return (
     <div id={`block-${id}`} className={classes.archiveBlock}>

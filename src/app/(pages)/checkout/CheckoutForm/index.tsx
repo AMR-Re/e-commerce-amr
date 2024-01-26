@@ -57,10 +57,7 @@ export const CheckoutForm: React.FC<{}> = () => {
                 items: (cart?.items || [])?.map(({ product, quantity }) => ({
                   product: typeof product === 'string' ? product : product.id,
                   quantity,
-                  price:
-                    typeof product === 'object'
-                      ? priceFromJSON(product.priceJSON, 1, true)
-                      : undefined,
+                  price: typeof product === 'object' ? priceFromJSON(product.priceJSON, 1, true) : undefined,
                 })),
               }),
             })

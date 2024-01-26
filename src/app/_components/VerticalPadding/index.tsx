@@ -11,18 +11,9 @@ type Props = {
   className?: string
 }
 
-export const VerticalPadding: React.FC<Props> = ({
-  top = 'medium',
-  bottom = 'medium',
-  className,
-  children,
-}) => {
+export const VerticalPadding: React.FC<Props> = ({ top = 'medium', bottom = 'medium', className, children }) => {
   return (
-    <div
-      className={[className, classes[`top-${top}`], classes[`bottom-${bottom}`]]
-        .filter(Boolean)
-        .join(' ')}
-    >
+    <div className={[className, classes[`top-${top}`], classes[`bottom-${bottom}`]].filter(Boolean).join(' ')}>
       {children}
     </div>
   )

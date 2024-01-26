@@ -14,9 +14,7 @@ export const LinkToPaymentIntent: React.FC<TextField> = props => {
 
   return (
     <div>
-      <p style={{ marginBottom: '0' }}>
-        {typeof label === 'string' ? label : 'Stripe Payment Intent ID'}
-      </p>
+      <p style={{ marginBottom: '0' }}>{typeof label === 'string' ? label : 'Stripe Payment Intent ID'}</p>
       <Text {...props} label="" />
       {Boolean(stripePaymentIntentID) && (
         <div>

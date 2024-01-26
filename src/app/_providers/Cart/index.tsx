@@ -1,14 +1,6 @@
 'use client'
 
-import React, {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useReducer,
-  useRef,
-  useState,
-} from 'react'
+import React, { createContext, useCallback, useContext, useEffect, useReducer, useRef, useState } from 'react'
 
 import { Product, User } from '../../../payload/payload-types'
 import { useAuth } from '../Auth'
@@ -75,9 +67,7 @@ export const CartProvider = props => {
         if (parsedCart?.items && parsedCart?.items?.length > 0) {
           const initialCart = await Promise.all(
             parsedCart.items.map(async ({ product, quantity }) => {
-              const res = await fetch(
-                `${process.env.NEXT_PUBLIC_SERVER_URL}/api/products/${product}`,
-              )
+              const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/products/${product}`)
               const data = await res.json()
               return {
                 product: data,
@@ -191,9 +181,7 @@ export const CartProvider = props => {
       if (Array.isArray(itemsInCart) && itemsInCart.length > 0) {
         isInCart = Boolean(
           itemsInCart.find(({ product }) =>
-            typeof product === 'string'
-              ? product === incomingProduct.id
-              : product?.id === incomingProduct.id,
+            typeof product === 'string' ? product === incomingProduct.id : product?.id === incomingProduct.id,
           ), // eslint-disable-line function-paren-newline
         )
       }

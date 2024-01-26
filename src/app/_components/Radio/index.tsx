@@ -10,13 +10,7 @@ interface RadioButtonProps {
   groupName: string
 }
 
-export const RadioButton: React.FC<RadioButtonProps> = ({
-  label,
-  value,
-  isSelected,
-  onRadioChange,
-  groupName,
-}) => {
+export const RadioButton: React.FC<RadioButtonProps> = ({ label, value, isSelected, onRadioChange, groupName }) => {
   const handleRadioChange = () => {
     onRadioChange(value)
   }

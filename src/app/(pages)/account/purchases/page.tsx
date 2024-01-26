@@ -29,9 +29,7 @@ export default async function Purchases() {
                   ) : (
                     <Link href={`/products/${purchase.slug}`} className={classes.item}>
                       <div className={classes.mediaWrapper}>
-                        {!purchase.meta.image && (
-                          <div className={classes.placeholder}>No image</div>
-                        )}
+                        {!purchase.meta.image && <div className={classes.placeholder}>No image</div>}
                         {purchase.meta.image && typeof purchase.meta.image !== 'string' && (
                           <Media imgClassName={classes.image} resource={purchase.meta.image} />
                         )}
@@ -39,9 +37,7 @@ export default async function Purchases() {
                       <div className={classes.itemDetails}>
                         <h6>{purchase.title}</h6>
                         <Price product={purchase} />
-                        <p className={classes.purchasedDate}>{`Purchased On: ${formatDateTime(
-                          purchase.createdAt,
-                        )}`}</p>
+                        <p className={classes.purchasedDate}>{`Purchased On: ${formatDateTime(purchase.createdAt)}`}</p>
                       </div>
                     </Link>
                   )}

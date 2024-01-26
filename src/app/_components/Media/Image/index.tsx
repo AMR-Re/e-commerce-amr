@@ -30,12 +30,7 @@ export const Image: React.FC<MediaProps> = props => {
   let src: StaticImageData | string = srcFromProps || ''
 
   if (!src && resource && typeof resource !== 'string') {
-    const {
-      width: fullWidth,
-      height: fullHeight,
-      filename: fullFilename,
-      alt: altFromResource,
-    } = resource
+    const { width: fullWidth, height: fullHeight, filename: fullFilename, alt: altFromResource } = resource
 
     width = fullWidth
     height = fullHeight
@@ -53,9 +48,7 @@ export const Image: React.FC<MediaProps> = props => {
 
   return (
     <NextImage
-      className={[isLoading && classes.placeholder, classes.image, imgClassName]
-        .filter(Boolean)
-        .join(' ')}
+      className={[isLoading && classes.placeholder, classes.image, imgClassName].filter(Boolean).join(' ')}
       src={src}
       alt={alt || ''}
       onClick={onClick}

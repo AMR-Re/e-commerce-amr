@@ -25,14 +25,7 @@ export const PageRange: React.FC<{
     plural?: string
   }
 }> = props => {
-  const {
-    className,
-    totalDocs,
-    currentPage,
-    collection,
-    limit,
-    collectionLabels: collectionLabelsFromProps,
-  } = props
+  const { className, totalDocs, currentPage, collection, limit, collectionLabels: collectionLabelsFromProps } = props
 
   const indexStart = (currentPage ? currentPage - 1 : 1) * (limit || 1) + 1
   let indexEnd = (currentPage || 1) * (limit || 1)

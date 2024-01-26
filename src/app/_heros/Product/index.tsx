@@ -17,9 +17,7 @@ export const ProductHero: React.FC<{
     <Gutter className={classes.productHero}>
       <div className={classes.mediaWrapper}>
         {!metaImage && <div className={classes.placeholder}>No image</div>}
-        {metaImage && typeof metaImage !== 'string' && (
-          <Media imgClassName={classes.image} resource={metaImage} fill />
-        )}
+        {metaImage && typeof metaImage !== 'string' && <Media imgClassName={classes.image} resource={metaImage} fill />}
       </div>
 
       <div className={classes.details}>

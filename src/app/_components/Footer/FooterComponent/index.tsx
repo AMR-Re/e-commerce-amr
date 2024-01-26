@@ -22,13 +22,7 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
         <ul className={classes.inclusions}>
           {inclusions.map(inclusion => (
             <li key={inclusion.title}>
-              <Image
-                src={inclusion.icon}
-                alt={inclusion.title}
-                width={36}
-                height={36}
-                className={classes.icon}
-              />
+              <Image src={inclusion.icon} alt={inclusion.title} width={36} height={36} className={classes.icon} />
 
               <h5 className={classes.title}>{inclusion.title}</h5>
               <p>{inclusion.description}</p>

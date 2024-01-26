@@ -3,7 +3,9 @@ const ContentSecurityPolicy = require('./csp')
 const redirects = require('./redirects')
 
 const nextConfig = {
-  typescript:{ignoreBuildErrors:true},
+	eslint: {
+		ignoreDuringBuilds: true,
+	},
 	reactStrictMode: true,
 	swcMinify: true,
 	images: {

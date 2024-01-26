@@ -9,11 +9,7 @@ const RichText: React.FC<{ className?: string; content: any }> = ({ className, c
     return null
   }
 
-  return (
-    <div className={[classes.richText, className].filter(Boolean).join(' ')}>
-      {serialize(content)}
-    </div>
-  )
+  return <div className={[classes.richText, className].filter(Boolean).join(' ')}>{serialize(content)}</div>
 }
 
 export default RichText

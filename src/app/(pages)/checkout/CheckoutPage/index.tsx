@@ -49,13 +49,10 @@ export const CheckoutPage: React.FC<{
 
       const makeIntent = async () => {
         try {
-          const paymentReq = await fetch(
-            `${process.env.NEXT_PUBLIC_SERVER_URL}/api/create-payment-intent`,
-            {
-              method: 'POST',
-              credentials: 'include',
-            },
-          )
+          const paymentReq = await fetch(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/create-payment-intent`, {
+            method: 'POST',
+            credentials: 'include',
+          })
 
           const res = await paymentReq.json()
 
@@ -158,17 +155,14 @@ export const CheckoutPage: React.FC<{
               appearance: {
                 theme: 'stripe',
                 variables: {
-                  colorText:
-                    theme === 'dark' ? cssVariables.colors.base0 : cssVariables.colors.base1000,
+                  colorText: theme === 'dark' ? cssVariables.colors.base0 : cssVariables.colors.base1000,
                   fontSizeBase: '16px',
                   fontWeightNormal: '500',
                   fontWeightBold: '600',
-                  colorBackground:
-                    theme === 'dark' ? cssVariables.colors.base850 : cssVariables.colors.base0,
+                  colorBackground: theme === 'dark' ? cssVariables.colors.base850 : cssVariables.colors.base0,
                   fontFamily: 'Inter, sans-serif',
                   colorTextPlaceholder: cssVariables.colors.base500,
-                  colorIcon:
-                    theme === 'dark' ? cssVariables.colors.base0 : cssVariables.colors.base1000,
+                  colorIcon: theme === 'dark' ? cssVariables.colors.base0 : cssVariables.colors.base1000,
                   borderRadius: '0px',
                   colorDanger: cssVariables.colors.error500,
                   colorDangerText: cssVariables.colors.error500,

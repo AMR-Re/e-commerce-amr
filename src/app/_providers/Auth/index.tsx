@@ -5,11 +5,7 @@ import React, { createContext, useCallback, useContext, useEffect, useState } fr
 import { User } from '../../../payload/payload-types'
 
 // eslint-disable-next-line no-unused-vars
-type ResetPassword = (args: {
-  password: string
-  passwordConfirm: string
-  token: string
-}) => Promise<void>
+type ResetPassword = (args: { password: string; passwordConfirm: string; token: string }) => Promise<void>
 
 type ForgotPassword = (args: { email: string }) => Promise<void> // eslint-disable-line no-unused-vars
 

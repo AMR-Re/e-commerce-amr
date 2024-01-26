@@ -23,12 +23,7 @@ export default async function MediaBlockPage() {
         <MediaBlock position="default" blockType="mediaBlock" media="" staticImage={staticImage} />
         <br />
         <br />
-        <MediaBlock
-          position="fullscreen"
-          blockType="mediaBlock"
-          media=""
-          staticImage={staticImage}
-        />
+        <MediaBlock position="fullscreen" blockType="mediaBlock" media="" staticImage={staticImage} />
       </VerticalPadding>
     </Fragment>
   )

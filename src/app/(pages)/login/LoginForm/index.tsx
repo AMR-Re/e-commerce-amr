@@ -48,22 +48,8 @@ const LoginForm: React.FC = () => {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={classes.form}>
       <Message error={error} className={classes.message} />
-      <Input
-        name="email"
-        label="Email Address"
-        required
-        register={register}
-        error={errors.email}
-        type="email"
-      />
-      <Input
-        name="password"
-        type="password"
-        label="Password"
-        required
-        register={register}
-        error={errors.password}
-      />
+      <Input name="email" label="Email Address" required register={register} error={errors.email} type="email" />
+      <Input name="password" type="password" label="Password" required register={register} error={errors.password} />
       <Button
         type="submit"
         appearance="primary"

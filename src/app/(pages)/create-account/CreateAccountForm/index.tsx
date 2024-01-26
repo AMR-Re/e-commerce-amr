@@ -81,30 +81,9 @@ const CreateAccountForm: React.FC = () => {
         {'.'}
       </p>
       <Message error={error} className={classes.message} />
-      <Input
-        name="email"
-        label="Email Address"
-        required
-        register={register}
-        error={errors.email}
-        type="email"
-      />
-      <Input
-        name="name"
-        label="Full name"
-        required
-        register={register}
-        error={errors.name}
-        type="text"
-      />
-      <Input
-        name="password"
-        type="password"
-        label="Password"
-        required
-        register={register}
-        error={errors.password}
-      />
+      <Input name="email" label="Email Address" required register={register} error={errors.email} type="email" />
+      <Input name="name" label="Full name" required register={register} error={errors.name} type="text" />
+      <Input name="password" type="password" label="Password" required register={register} error={errors.password} />
       <Input
         name="passwordConfirm"
         type="password"

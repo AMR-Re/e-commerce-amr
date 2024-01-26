@@ -84,9 +84,7 @@ export const PaywallBlocks: React.FC<{
             message={
               <>
                 {`This content is gated behind a paywall. You must be `}
-                <Link href={`/login?redirect=${encodeURIComponent(window.location.pathname)}`}>
-                  logged in
-                </Link>
+                <Link href={`/login?redirect=${encodeURIComponent(window.location.pathname)}`}>logged in</Link>
                 {` as an admin or have purchased this product to view this content.`}
               </>
             }

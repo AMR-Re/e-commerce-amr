@@ -71,12 +71,7 @@ export default async function Orders() {
                     </p>
                   </div>
                 </div>
-                <Button
-                  appearance="secondary"
-                  label="View Order"
-                  className={classes.button}
-                  el="button"
-                />
+                <Button appearance="secondary" label="View Order" className={classes.button} el="button" />
               </Link>
               {index !== orders.length - 1 && <HR />}
             </li>
